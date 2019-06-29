@@ -1,0 +1,19 @@
+<h1>COUNT OF WORDS You Entered is  {{ count }}</h1>
+
+<a href="{% url 'home' %}"> Start Again </a>
+<h1> Your text is : </h1> {{ fulltext }}
+
+<h1>Word Count</h1>
+
+<!-- This is how we print the entire dictionary into the html code-->
+{{ wordDict }}
+
+<br/>
+<!-- below is how we write a for loop in html code, where word and countTotal are the key: value of the dictionary wordDict-->
+{% for word, countTotal in sortedWords %}
+
+<br/>
+{{ word }} - {{ countTotal }}
+<br/>
+
+{% endfor%}
